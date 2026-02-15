@@ -96,3 +96,10 @@
     ```bash
     git log --stat
     ```
+
+### git log --oneline
+- Shows commit history in a compact, one-line-per-commit format.
+- **Example**:
+    ```bash
+    git log --oneline
+    ```
