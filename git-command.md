@@ -68,3 +68,31 @@
     ```bash
     git restore git-command.md
     ```
+
+### git diff --staged
+- Shows changes between staging area and last commit.
+- **Example**:
+    ```bash
+    git diff --staged
+    ```
+
+### git show
+- Displays detailed information about a specific commit.
+- **Example**:
+    ```bash
+    git show <commit-hash>
+    ```
+
+### git rm --cached
+- Removes a file from Git tracking but keeps it in the working directory.
+- **Example**:
+    ```bash
+    git rm --cached file.txt
+    ```
+
+### git log --stat
+- Shows commit history with file change statistics.
+- **Example**:
+    ```bash
+    git log --stat
+    ```
