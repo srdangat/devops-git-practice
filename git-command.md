@@ -54,3 +54,17 @@
     ```bash
     git log
     ```
+
+### git diff 
+- Show changes between working directory and staging area
+- **Example**:
+    ```bash
+    git diff
+    ```
+
+### git restore
+- Restores working directory files.
+- **Example**
+    ```bash
+    git restore git-command.md
+    ```
