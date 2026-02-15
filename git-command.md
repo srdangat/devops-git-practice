@@ -103,3 +103,10 @@
     ```bash
     git log --oneline
     ```
+
+### git log --graph
+- Displays commit history as a visual graph.
+- **Example**:
+    ```bash
+    git log --graph
+    ```
