@@ -119,3 +119,25 @@
     ```bash
     git branch
     ```
+
+### git switch <branch> / git checkout <branch>
+- Switch to an existing branch.
+- **Example**:
+    ```bash
+    git switch feature-1
+    git checkout feature-1
+    ```
+
+### git checkout -b
+- Create a new branch and switch to it immediately.
+- **Example**:
+    ```bash
+    git checkout -b feature-2
+    ```
+
+### git branch -d
+- Delete a local branch.
+- **Example**:
+    ```bash
+    git branch -d feature-2
+    ```
