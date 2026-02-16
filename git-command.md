@@ -110,3 +110,12 @@
     ```bash
     git log --graph
     ```
+
+## Branching
+
+### git branch
+- Lists all local branches in the repository.
+- **Example**:
+    ```bash
+    git branch
+    ```
