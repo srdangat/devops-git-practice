@@ -172,3 +172,26 @@
     ```bash
     git push -u origin feature-1
     ```
+
+## Repositories
+
+
+### Clone Repository
+```bash
+    git clone https://github.com/username/repository.git
+```
+    
+### Pull from GitHub
+```bash
+    git fetch origin && git pull origin main
+```
+
+
+### Fork Workflow – Keep Fork in Sync
+```bash
+    git remote add upstream git@github.com:aws-containers/retail-store-sample-app.git
+    git checkout main
+    git fetch upstream 
+    git merge upstream/main
+    git push origin main
+```
