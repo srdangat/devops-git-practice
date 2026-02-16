@@ -141,3 +141,34 @@
     ```bash
     git branch -d feature-2
     ```
+
+## Connect Local Repo to GitHub Remote
+
+### git remote add origin
+- Connects your local repository to a GitHub remote repository.
+- **Example**:
+    ```bash
+    git remote add origin https://github.com/your-username/devops-git-practice.git
+    ```
+
+---
+
+## Push Main Branch
+
+### git push -u origin main
+- Pushes the local `main` branch to GitHub and sets upstream tracking.
+- **Example**:
+    ```bash
+    git push -u origin main
+    ```
+
+---
+
+## Push feature-1 Branch
+
+### git push -u origin feature-1
+- Pushes the local `feature-1` branch to GitHub and sets upstream tracking.
+- **Example**:
+    ```bash
+    git push -u origin feature-1
+    ```
