@@ -2,3 +2,4 @@ Day 24: Advanced Git: Merge, Rebase, Stash & Cherry Pick
 Create login form with email and password fields
 Implement basic login validation and error msg
 Create singup form with username,email,password
+Add password validation and terms checkbox
