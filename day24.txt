@@ -4,3 +4,4 @@ Implement basic login validation and error msg
 refactor main layout style for header and footer
 Create signup form with username, email, password
 Add password validation and terms checkboxUpdate header component with notification icon
+add profile page
