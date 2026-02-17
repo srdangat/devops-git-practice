@@ -3,4 +3,6 @@ Create login form with email and password fields
 Implement basic login validation and error msg
 refactor main layout style for header and footer
 Create signup form with username, email, password
-Add password validation and terms checkboxUpdate header component with notification icon
+Add password validation and terms checkbox
+Update header component with notification icon
+Add dashboard with sidebar
