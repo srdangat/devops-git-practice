@@ -12,3 +12,4 @@ Add toggle for dark mode
 Fixing a critical bug in production
 Fix login form button
 Update login error messages 
+Add logging for failed login attempts
