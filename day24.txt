@@ -11,3 +11,4 @@ Add settings page UI
 Add toggle for dark mode
 Start implementing settings page
 Add dark mode toggle
+Configure API endpoint
