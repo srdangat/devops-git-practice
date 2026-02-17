@@ -10,3 +10,5 @@ add edit profile form with name,bio
 Add settings page UI
 Add toggle for dark mode
 Fixing a critical bug in production
+Fix login form button
+Update login error messages
