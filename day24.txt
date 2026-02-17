@@ -6,3 +6,4 @@ Create signup form with username, email, password
 Add password validation and terms checkbox
 Update header component with notification icon
 Add dashboard with sidebar
+Connect dashboard to API to fetch user stats
