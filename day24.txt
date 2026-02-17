@@ -9,3 +9,5 @@ implement profile picture upload
 add edit profile form with name,bio
 Add settings page UI
 Add toggle for dark mode
+Start implementing settings page
+Add dark mode toggle
