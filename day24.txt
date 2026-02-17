@@ -7,3 +7,4 @@ Add password validation and terms checkboxUpdate header component with notificat
 add profile page
 implement profile picture upload
 add edit profile form with name,bio
+Add settings page UI
