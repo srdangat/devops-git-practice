@@ -6,3 +6,4 @@ Create signup form with username, email, password
 Add password validation and terms checkboxUpdate header component with notification icon
 add profile page
 implement profile picture upload
+add edit profile form with name,bio
