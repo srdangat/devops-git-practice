@@ -1,197 +1,40 @@
-# Git Commands
+# Git Commands Cheat Sheet
 
-
-## Setup & Config
-
-### git init
-- Initializes a new Git repository.
-- **Example**: 
-    ```bash
-    git init 
-    ```
-### git config
-- Configures Git username or email.
-- **Example**:
-    ```bash
-    git config --global user.name "Your Name"
-    git config --global user.email "Your Email"
-    ```
-- View Config Values
-- **Example**:
-    ```bash
-        git config --global --list
-    ```
-
-## Basic Workflow
-
-### git add
-- Stages files for commit.
-- **Example**:
-    ```bash
-    git add git-commands.md
-    ```
-
-### git commit
-- Save staged changes with a message explaining what you changed.
-- **Example**:
-    ```bash
-    git commit -m "Add git commands reference"
-    ```
-
-## Viewing Changes
-
-### git status
-- Lists which files are modified and not yet stage
-- **Example**:
-    ```bash
-    git status
-    ```
-
-### git log
-- Shows the history of commits in your repository who changed what,when,and why.
-- Its also shows Commit hash,Author name & email,Date,Commit message
-- **Example**:
-    ```bash
-    git log
-    ```
-
-### git diff 
-- Show changes between working directory and staging area
-- **Example**:
-    ```bash
-    git diff
-    ```
-
-### git restore
-- Restores working directory files.
-- **Example**
-    ```bash
-    git restore git-command.md
-    ```
-
-### git diff --staged
-- Shows changes between staging area and last commit.
-- **Example**:
-    ```bash
-    git diff --staged
-    ```
-
-### git show
-- Displays detailed information about a specific commit.
-- **Example**:
-    ```bash
-    git show <commit-hash>
-    ```
-
-### git rm --cached
-- Removes a file from Git tracking but keeps it in the working directory.
-- **Example**:
-    ```bash
-    git rm --cached file.txt
-    ```
-
-### git log --stat
-- Shows commit history with file change statistics.
-- **Example**:
-    ```bash
-    git log --stat
-    ```
-
-### git log --oneline
-- Shows commit history in a compact, one-line-per-commit format.
-- **Example**:
-    ```bash
-    git log --oneline
-    ```
-
-### git log --graph
-- Displays commit history as a visual graph.
-- **Example**:
-    ```bash
-    git log --graph
-    ```
-
-## Branching
-
-### git branch
-- Lists all local branches in the repository.
-- **Example**:
-    ```bash
-    git branch
-    ```
-
-### git switch <branch> / git checkout <branch>
-- Switch to an existing branch.
-- **Example**:
-    ```bash
-    git switch feature-1
-    git checkout feature-1
-    ```
-
-### git checkout -b
-- Create a new branch and switch to it immediately.
-- **Example**:
-    ```bash
-    git checkout -b feature-2
-    ```
-
-### git branch -d
-- Delete a local branch.
-- **Example**:
-    ```bash
-    git branch -d feature-2
-    ```
-
-## Connect Local Repo to GitHub Remote
-
-### git remote add origin
-- Connects your local repository to a GitHub remote repository.
-- **Example**:
-    ```bash
-    git remote add origin https://github.com/your-username/devops-git-practice.git
-    ```
-
----
-
-## Push Main Branch
-
-### git push -u origin main
-- Pushes the local `main` branch to GitHub and sets upstream tracking.
-- **Example**:
-    ```bash
-    git push -u origin main
-    ```
-
----
-
-## Push feature-1 Branch
-
-### git push -u origin feature-1
-- Pushes the local `feature-1` branch to GitHub and sets upstream tracking.
-- **Example**:
-    ```bash
-    git push -u origin feature-1
-    ```
-
-## Repositories
-
-
-### Clone Repository
-```bash
-    git clone https://github.com/username/repository.git
-```
-    
-### Pull from GitHub
-```bash
-    git fetch origin && git pull origin main
-```
-
-
-### Fork Workflow – Keep Fork in Sync
-```bash
-    git remote add upstream git@github.com:aws-containers/retail-store-sample-app.git
-    git checkout main
-    git fetch upstream 
-    git merge upstream/main
-    git push origin main
-```
+| **Category** | **Command** | **Description / Use** | **Example** |
+|--------------|------------|---------------------|------------|
+| **Setup & Config** | `git init` | Initialize a new Git repository | `git init` |
+|  | `git config` | Set username/email or view config | `git config --global user.name "Your Name"`<br>`git config --global user.email "your@email.com"`<br>`git config --global --list` |
+| **Basic Workflow** | `git add` | Stage files for commit | `git add file.txt` |
+|  | `git commit` | Commit staged changes with a message | `git commit -m "Commit message"` |
+|  | `git status` | Check current repository status | `git status` |
+|  | `git log` | View commit history | `git log` |
+|  | `git log --oneline` | Compact one-line-per-commit log | `git log --oneline` |
+|  | `git log --graph` | Visual commit graph | `git log --graph` |
+|  | `git diff` | Show unstaged changes | `git diff` |
+|  | `git diff --staged` | Show staged changes | `git diff --staged` |
+|  | `git show <commit>` | Show details of a commit | `git show <commit-hash>` |
+|  | `git restore` | Restore file to last committed state | `git restore file.txt` |
+|  | `git rm --cached` | Remove file from tracking but keep it locally | `git rm --cached file.txt` |
+| **Branching** | `git branch` | List or create branches | `git branch` |
+|  | `git checkout <branch>` | Switch to branch | `git checkout feature-1` |
+|  | `git switch <branch>` | Switch to branch (modern) | `git switch feature-1` |
+|  | `git checkout -b <branch>` | Create and switch to new branch | `git checkout -b feature-2` |
+|  | `git branch -d <branch>` | Delete a local branch | `git branch -d feature-2` |
+| **Remote** | `git remote add origin` | Link local repo to remote | `git remote add origin <url>` |
+|  | `git push` | Push local commits to remote | `git push -u origin main` |
+|  | `git pull` | Fetch & merge changes from remote | `git pull origin main` |
+|  | `git fetch` | Download changes from remote without merging | `git fetch origin` |
+|  | `git clone` | Clone a remote repository | `git clone <url>` |
+|  | Fork workflow | Keep fork in sync | `git remote add upstream <url>`<br>`git fetch upstream`<br>`git merge upstream/main`<br>`git push origin main` |
+| **Merging & Rebasing** | `git merge <branch>` | Merge branch into current | `git merge feature-login` |
+|  | `git merge --squash <branch>` | Combine all branch commits into one | `git merge --squash feature-profile`<br>`git commit -m "Add feature-profile"` |
+|  | `git rebase <branch>` | Reapply commits on top of another branch | `git checkout feature-dashboard`<br>`git rebase main` |
+| **Stash & Cherry Pick** | `git stash` | Save uncommitted changes | `git stash` |
+|  | `git stash list` | List stashed changes | `git stash list` |
+|  | `git stash pop` | Apply stashed changes & remove from stash | `git stash pop` |
+|  | `git stash apply <stash>` | Apply stashed changes without removing | `git stash apply stash@{1}` |
+|  | `git cherry-pick <commit>` | Apply specific commit from another branch | `git cherry-pick <commit-hash>` |
+| **Reset & Revert** | `git reset --soft HEAD~1` | Undo commit, keep changes staged | `git reset --soft HEAD~1` |
+|  | `git reset --mixed HEAD~1` | Undo commit, unstage changes | `git reset --mixed HEAD~1` |
+|  | `git reset --hard HEAD~1` | Undo commit, discard all changes | `git reset --hard HEAD~1` |
+|  | `git revert <commit>` | Undo a commit by creating a new commit | `git revert <commit-hash>` |
