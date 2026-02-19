@@ -38,3 +38,23 @@
 |  | `git reset --mixed HEAD~1` | Undo commit, unstage changes | `git reset --mixed HEAD~1` |
 |  | `git reset --hard HEAD~1` | Undo commit, discard all changes | `git reset --hard HEAD~1` |
 |  | `git revert <commit>` | Undo a commit by creating a new commit | `git revert <commit-hash>` |
+| **GH CLI Setup**               | `gh auth login`    | Authenticate GitHub CLI with your account    | `gh auth login`                                                                             |
+|                                | `gh auth status`   | Check authentication status & active account | `gh auth status`                                                                            |
+| **GH CLI Repo**                | `gh repo create`   | Create a new GitHub repository               | `gh repo create my-repo --public --description "Test repo" --confirm`                       |
+|                                | `gh repo clone`    | Clone a repository using GitHub CLI          | `gh repo clone username/repo-name`                                                          |
+|                                | `gh repo view`     | View repository details in terminal          | `gh repo view username/repo-name`                                                           |
+|                                | `gh repo list`     | List all repositories for a user or org      | `gh repo list username`                                                                     |
+|                                | `gh repo delete`   | Delete a repository (use with caution!)      | `gh repo delete my-repo --confirm`                                                          |
+| **GH CLI Issue**               | `gh issue create`  | Create a new issue in a repository           | `gh issue create --title "Bug found" --body "Steps to reproduce..." --label "bug"`          |
+|                                | `gh issue list`    | List all issues in a repo                    | `gh issue list --repo username/repo-name`                                                   |
+|                                | `gh issue view`    | View a specific issue                        | `gh issue view 12 --repo username/repo-name`                                                |
+|                                | `gh issue close`   | Close an issue                               | `gh issue close 12 --repo username/repo-name`                                               |
+|                                | `gh issue comment` | Add a comment to an issue                    | `gh issue comment 12 --body "Checked automatically."`                                       |
+| **GH CLI Pull Request**        | `gh pr create`     | Create a pull request from terminal          | `gh pr create --base main --head feature-branch --title "Add feature" --body "Description"` |
+|                                | `gh pr list`       | List all open pull requests                  | `gh pr list --repo username/repo-name`                                                      |
+|                                | `gh pr view`       | View details of a PR                         | `gh pr view 5 --repo username/repo-name`                                                    |
+|                                | `gh pr merge`      | Merge a pull request                         | `gh pr merge 5 --merge`<br>`gh pr merge 5 --squash`<br>`gh pr merge 5 --rebase`             |
+|                                | `gh pr review`     | Review someone else's PR                     | `gh pr review 5 --approve`<br>`gh pr review 5 --comment "Looks good"`                       |
+| **GH CLI Actions / Workflows** | `gh run list`      | List workflow runs                           | `gh run list --repo username/repo-name`                                                     |
+|                                | `gh run view`      | View a specific workflow run                 | `gh run view 12345 --repo username/repo-name`                                               |
+|                                | `gh workflow list` | List all workflows in a repository           | `gh workflow list --repo username/repo-name`                                                |
